@@ -1,0 +1,37 @@
+$ros-distance: 100px !default;
+
+// fade animation
+[data-ros^="fade"][data-ros^="fade"] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  &.ros-active {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-ros="fade-up"] {
+  transform: translate3d(0, $ros-distance, 0);
+}
+
+[data-ros="fade-right"] {
+  transform: translate3d(-$ros-distance, 0, 0);
+}
+
+[data-ros="fade-left"] {
+  transform: translate3d($ros-distance, 0, 0);
+}
+
+// zoom animation
+[data-ros^="zoom"][data-ros^="zoom"] {
+  opacity: 0;
+  transition-property: opacity, transform;
+
+  &.ros-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+[data-ros="zoom-in"] {
+  transform: scale(0.6);
+}
