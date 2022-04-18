@@ -1,0 +1,32 @@
+@use "mixin" as *;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 400px;
+  background: rgba(229, 229, 229, 0.5);
+  height: 50px;
+  place-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.icon-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: max-content;
+  @include center;
+  & > img {
+    min-width: 18px;
+    min-height: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.input {
+  color: var(--secondary);
+  &::placeholder {
+    color: var(--text-color);
+  }
+}

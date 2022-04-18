@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "swiper/scss/navigation";
 
 import "assets/scss/globals.scss";
 import "common/functions/reveal-on-scroll/scss/ros.scss";

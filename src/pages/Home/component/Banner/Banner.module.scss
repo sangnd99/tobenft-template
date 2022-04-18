@@ -1,0 +1,21 @@
+.container {
+  margin-bottom: 50px;
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & > h1 {
+      text-align: center;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: var(--text-3xl);
+      margin-bottom: 15px;
+    }
+    & > p {
+      color: var(--secondary);
+      text-align: center;
+      font-size: var(--text-xl);
+    }
+    margin-bottom: 50px;
+  }
+}

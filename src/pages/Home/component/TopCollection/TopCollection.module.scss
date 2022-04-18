@@ -1,0 +1,56 @@
+@use "mixin" as *;
+
+.container {
+  position: relative;
+  .slide-item {
+    width: max-content;
+    & > img {
+      width: 168px;
+      height: 168px;
+      min-width: 168px;
+      min-height: 168px;
+      @include responsive(mobile) {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+        min-height: 100px;
+      }
+    }
+    & > p {
+      color: var(--secondary);
+      font-size: 24px;
+      @include responsive(mobile) {
+        font-size: 16px;
+      }
+      text-align: center;
+    }
+  }
+
+  .swiper-next,
+  .swiper-prev {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    & > img {
+      width: 50px;
+      height: 50px;
+      @include responsive(mobile) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .swiper-next {
+    transform: translateY(50%);
+    width: max-content;
+    right: 0;
+    bottom: 50%;
+    z-index: 10;
+  }
+
+  .swiper-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+}

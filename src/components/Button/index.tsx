@@ -4,16 +4,13 @@ import cn from "classnames";
 
 import styles from "./Button.module.scss";
 
-export type IVariant = "primary" | "secondary" | "outline";
-
-export type ISize = "sm" | "md" | "full";
-
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   to?: string;
+  full?: boolean;
 }
 
 const Button: React.FC<IButtonProps> = (props) => {
-  const { children, onClick, to, ...restProps } = props;
+  const { children, onClick, to, full = false, ...restProps } = props;
   const navigate = useNavigate();
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     if (to) {
@@ -23,11 +20,11 @@ const Button: React.FC<IButtonProps> = (props) => {
   };
   return (
     <button
-      className={styles.container}
+      className={cn(styles.container, { [styles.full]: full })}
       onClick={handleClick}
       {...(restProps as any)}
     >
-      <div className={cn(styles.wrapper)}>{children}</div>
+      {children}
     </button>
   );
 };

@@ -1,0 +1,24 @@
+@use "mixin" as *;
+
+.banner-swiper {
+  .swiper-pagination-bullet {
+    width: 60px;
+    @include responsive(mobile) {
+      width: 20px;
+    }
+    height: 5px;
+    border-radius: 0;
+    background-color: #c4c4c4;
+    opacity: 1;
+    border-radius: 5px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--primary);
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--white);
+  }
+}

@@ -1,41 +1,11 @@
 :root {
-  --card-backup: #0344ff;
-  --card-gradient: radial-gradient(
-    54.94% 46.19% at 50% 50%,
-    #0344ff 0%,
-    #1f29c5 100%
-  );
-  --button-primary-backup: #af590b;
-  --button-primary-gradient: linear-gradient(
-    90deg,
-    #af590b 0%,
-    #fb7700 104.55%
-  );
-  --button-secondary-backup: rgb(32, 88, 242);
-  --button-secondary-gradient: linear-gradient(
-    90deg,
-    rgba(32, 88, 242, 1) 0%,
-    rgba(126, 60, 219, 1) 55%,
-    rgba(186, 0, 144, 1) 90%,
-    rgba(189, 0, 128, 1) 100%
-  );
-  --text-backup: #ff1d52;
-  --text-gradient: linear-gradient(180deg, #ff1d52 0%, #ff9d00 100%);
-  --text-highlight-backup: #0576f6;
-  --text-highlight-gradient: linear-gradient(
-    90deg,
-    rgba(0, 194, 242, 0) 1.1%,
-    #0576f6 51.22%,
-    rgba(3, 68, 255, 0) 96.37%
-  );
-  --section-gradient: radial-gradient(
-    127.94% 90.48% at 0.79% -0.39%,
-    rgba(31, 41, 197, 0.6) 0%,
-    rgba(22, 0, 143, 0.6) 58.85%,
-    rgba(0, 104, 222, 0.6) 100%
-  );
-  --section-shadow: drop-shadow(0px 10px 20px rgba(0, 194, 242, 0.5));
-  --background: #011358;
+  --primary: #4bbd99;
+  --secondary: #007e94;
+  --tertiary: #00c398;
+  --text-color: #97b5bf;
+  --hover-color: rgba(151, 181, 191, 0.2);
+  --drop-shadow: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.05));
+  --background: #f9fdfe;
   --white: #ffffff;
   // text size
   --text-xs: 16px;
@@ -46,9 +16,9 @@
   --text-2xl: 36px;
   --text-3xl: 48px;
   --text-4xl: 64px;
+
   // others
-  --button-border-radius: 16px;
-  --container: 1100px;
+  --container: 1300px;
 }
 
 @media all and (max-width: 600px) {

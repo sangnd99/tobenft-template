@@ -1,0 +1,148 @@
+@use "mixin" as *;
+
+.wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  background: var(--white);
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.05));
+  padding: 15px 0;
+  @include responsive(mobile) {
+    padding: 10px 0;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  & img {
+    width: 160px;
+    @include responsive(mobile) {
+      width: 120px;
+    }
+  }
+}
+
+.desktop-action {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex: 1;
+  @include responsive(desktop) {
+    display: none;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    & > ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding-right: 20px;
+      & li a {
+        display: flex;
+        align-items: center;
+        color: var(--secondary);
+        font-size: var(--text-xs);
+        font-weight: 600;
+        gap: 10px;
+        & img {
+          width: 9px;
+          height: 7px;
+        }
+      }
+    }
+  }
+}
+
+.separate {
+  height: 30px;
+  width: 1px;
+  background: #f1f2f2;
+}
+
+// Mobile path
+
+.mobile-action {
+  display: none;
+  align-items: center;
+  @include responsive(desktop) {
+    display: flex;
+  }
+  &__btn-wrapper {
+    @include round(40px);
+    @include center;
+    cursor: pointer;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 100;
+  background: var(--white);
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.05));
+  padding-top: 10px;
+  transform: translateX(100%);
+  transition-duration: 0.3s;
+  &--extend {
+    transform: translateX(0);
+  }
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    @include center;
+  }
+  &__extend {
+    @include center;
+    & > img {
+      transition-duration: 0.3s;
+      // &.active {
+      //   transform: rotate(180deg);
+      // }
+    }
+  }
+  &__btn {
+    padding: 15px;
+  }
+  &__authen {
+    color: var(--secondary);
+    font-weight: 600;
+    display: block;
+    padding: 15px;
+    text-align: center;
+  }
+  & > li {
+    color: var(--secondary);
+    font-weight: 500;
+    display: flex;
+    & a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      width: 100%;
+      transition-duration: 0.3s;
+      &:hover {
+        background: var(--hover-color);
+      }
+    }
+  }
+  &__logo {
+    @include center;
+    width: 100%;
+    padding: 15px;
+  }
+}

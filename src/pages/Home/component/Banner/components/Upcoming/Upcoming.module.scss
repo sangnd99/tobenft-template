@@ -1,0 +1,36 @@
+@use "mixin" as *;
+
+.wrapper {
+  height: 450px;
+  background: var(--background-image);
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  @include center;
+}
+
+.content {
+  @include center;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--white);
+  text-align: center;
+  font-size: var(--text-sm);
+  &__btn {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto 1fr;
+    background: var(--primary);
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+  }
+  &__date {
+    font-weight: 600;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: var(--text-2xl);
+  }
+}
