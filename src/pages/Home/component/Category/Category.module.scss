@@ -1,0 +1,43 @@
+@use "mixin" as *;
+
+.container {
+  margin-bottom: 50px;
+}
+
+.card-container {
+  display: grid;
+  @include gridCols(3);
+  @include responsive(desktop) {
+    @include gridCols(2);
+  }
+  @include responsive(tablet) {
+    @include gridCols(1);
+  }
+  .card {
+    padding: 12px;
+    gap: 25px;
+    background: linear-gradient(
+      180deg,
+      #f9fdfe 0%,
+      rgba(249, 253, 254, 0) 100%
+    );
+    @include center;
+    flex-direction: column;
+    gap: 30px;
+    font-size: var(--text-lg);
+    color: var(--secondary);
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
+    border-radius: 10px;
+    &__image-wrapper {
+      height: 200px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

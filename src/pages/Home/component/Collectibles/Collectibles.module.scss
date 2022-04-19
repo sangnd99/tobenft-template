@@ -1,0 +1,51 @@
+@use "mixin" as *;
+
+.container {
+  margin-bottom: 50px;
+}
+
+.header {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 20px;
+  @include responsive(tablet) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include responsive(mobile) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.card-container {
+  display: grid;
+  @include gridCols(4);
+  gap: 25px;
+  @include responsive(desktop) {
+    @include gridCols(3);
+  }
+  @include responsive(laptop) {
+    @include gridCols(2);
+  }
+  @include responsive(mobile) {
+    @include gridCols(1);
+    gap: 15px;
+  }
+  margin-bottom: 20px;
+}
+
+.show-more {
+  color: var(--text-color);
+  border-bottom: 1px solid;
+  width: max-content;
+  margin: 0 auto;
+}

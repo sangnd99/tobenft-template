@@ -1,0 +1,74 @@
+@use "mixin" as *;
+
+.wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.step {
+  &__container {
+    display: grid;
+    @include gridCols(4);
+    gap: 40px;
+    margin-bottom: 50px;
+    @include responsive(desktop) {
+      @include gridCols(2);
+    }
+    @include responsive(mobile) {
+      @include gridCols(1);
+    }
+  }
+  &__card {
+    display: grid;
+    gap: 10px;
+    color: var(--text-color);
+    font-size: var(--text-xs);
+    text-align: justify;
+    &-image-wrapper {
+      height: 60px;
+    }
+    &-name {
+      color: var(--secondary);
+      font-size: var(--text-md);
+    }
+  }
+}
+
+.about-us {
+  &__container {
+    display: grid;
+    @include gridCols(2);
+    gap: 60px;
+    @include responsive(laptop) {
+      @include gridCols(1);
+    }
+  }
+  &__card {
+    padding: 35px 65px;
+    @include responsive(mobile) {
+      padding: 15px 20px;
+    }
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 50px;
+    color: var(--text-color);
+    font-size: var(--text-xl);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    @include responsive(mobile) {
+      gap: 30px;
+    }
+    & > img {
+      width: 70px;
+      @include responsive(mobile) {
+        width: 50px;
+      }
+    }
+  }
+  &__name {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

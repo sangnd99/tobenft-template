@@ -5,6 +5,7 @@ import styles from "./TopCollection.module.scss";
 import { listCollection } from "./helpers";
 import { SwiperPrev, SwiperNext } from "assets/svg";
 import { randomId } from "common/functions";
+import Heading from "components/Heading";
 
 interface ITopProps {}
 
@@ -13,6 +14,7 @@ const TopCollection: React.FC<ITopProps> = () => {
   const [nextEl, setNextEl] = useState<HTMLDivElement | null>(null);
   return (
     <div className={styles.container}>
+      <Heading center>Top Collections</Heading>
       <Swiper
         scrollbar={{ draggable: true }}
         slidesPerView={3}

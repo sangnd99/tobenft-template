@@ -8,6 +8,7 @@
   --background: #f9fdfe;
   --white: #ffffff;
   // text size
+  --text-2xs: 14px;
   --text-xs: 16px;
   --text-sm: 18px;
   --text-md: 20px;
@@ -23,6 +24,7 @@
 
 @media all and (max-width: 600px) {
   :root {
+    --text-2xs: 12px;
     --text-xs: 14px;
     --text-sm: 16px;
     --text-md: 18px;

@@ -57,3 +57,9 @@ $desktop: 1270px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+@mixin flex($alignItem, $justifyContent) {
+  display: flex;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+}

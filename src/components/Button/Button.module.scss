@@ -1,13 +1,25 @@
 @use "mixin" as *;
 
 .container {
-  background: var(--primary);
   color: var(--white);
   font-weight: 500;
   padding: 10px 30px;
   border-radius: 10px;
+  transition-duration: 0.3s;
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.contained {
+  background: var(--primary);
 }
 
 .full {
   width: 100%;
+}
+
+.outline {
+  box-shadow: inset 0 0 0 2px var(--primary);
+  color: var(--secondary);
 }
